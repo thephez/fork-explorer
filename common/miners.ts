@@ -20,6 +20,10 @@ const miners: IMiners = {
       name: "Luxor",
       link: "https://mining.luxor.tech",
     },
+    "/CybtcPool/": {
+      name: "Cybtc",
+      link: "",
+    },
     "/1THash&58COIN/": {
       name: "1THash",
       link: "https://www.1thash.top",
@@ -586,54 +590,18 @@ const miners: IMiners = {
     },
   },
   payout_addresses: {
-    "3Bmb9Jig8A5kHdDSxvDZ6eryj3AXd3swuJ": {
-      name: "NovaBlock",
-      link: "https://novablock.com",
+    "XoSxpd5VYNQvKbXbEaDKt6P1aZANzAkXrJ": {
+      name: "Luxor",
+      link: "https://mining.luxor.tech",
     },
-    "3GvEGtnvgeBJ3p3EpdZhvUkxY4pDARkbjd": {
-      name: "Bitfarms",
-      link: "https://www.bitfarms.io/",
+    "XmzfivrzYQ7B7oBMZKwPRdhjB1iNvX71XZ": {
+      name: "F2Pool",
+      link: "",
     },
-    "1CjPR7Z5ZSyWk6WtXvSFgkptmpoi4UM9BC": {
-      name: "GHash.IO",
-      link: "https://ghash.io/",
-    },
-    "14R2r9FkyDmyxGB9xUVwVLdgsX9YfdVamk": {
-      name: "BitcoinRussia",
-      link: "https://bitcoin-russia.ru/",
-    },
-    "165GCEAx81wce33FWEnPCRhdjcXCrBJdKn": {
-      name: "BitcoinRussia",
-      link: "https://bitcoin-russia.ru/",
-    },
-    "17kkmDx8eSwj2JTTULb3HkJhCmexfysExz": {
-      name: "Polmine",
-      link: "https://polmine.pl/",
-    },
-    "1AajKXkaq2DsnDmP8ZPTrE5gH1HFo1x3AU": {
-      name: "Polmine",
-      link: "https://polmine.pl/",
-    },
-    "16cv7wyeG6RRqhvJpY21CnsjxuKj2gAoK2": {
-      name: "Polmine",
-      link: "https://polmine.pl/",
-    },
-    "13vWXwzNF5Ef9SUXNTdr7de7MqiV4G1gnL": {
-      name: "Polmine",
-      link: "https://polmine.pl/",
-    },
-    "1Nsvmnv8VcTMD643xMYAo35Aco3XA5YPpe": {
-      name: "Polmine",
-      link: "https://polmine.pl/",
-    },
-    "1JrYhdhP2jCY6JwuVzdk9jUwc4pctcSes7": {
-      name: "Polmine",
-      link: "https://polmine.pl/",
-    },
-    "16jnC5hVyjk4gE6BJtLqkkyfZHqXCB5PBu": {
-      name: "Polmine",
-      link: "https://polmine.pl/",
-    },
+    "Xts6TLf8gdjdxRon7L794WRC53Le7H7D9n": {
+      name: "Mining-Dutch",
+      link: "",
+    },    
     "1CK6KHY6MHgYvmRQ4PAafKYDrg1ejbH1cE": {
       name: "SlushPool",
       link: "https://slushpool.com/",
