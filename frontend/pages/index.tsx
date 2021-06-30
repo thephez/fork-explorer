@@ -74,7 +74,7 @@ export default function Blocks() {
     selectedMiner = undefined;
   }
   const selectedBlock = query.get("block");
-  const thresholdPercentage = Math.floor((config.fork.threshold / 2016) * 100);
+  const thresholdPercentage = Math.floor((config.fork.threshold / 4032) * 100);
 
   return (
     <Container>
@@ -105,7 +105,7 @@ export default function Blocks() {
               </DescriptionBlock>
               {blocks.length > 0 && <ProgressBar />}
               <TopSection>
-                <CurrentPeriod>Current signalling period of 2016 blocks (2 weeks)</CurrentPeriod>
+                <CurrentPeriod>Current signalling period of 4032 blocks (1 week)</CurrentPeriod>
                 {/* <LockinInfo>90% of blocks within the period have to signal.</LockinInfo> */}
                 <LockinInfo>
                   {lockedIn && <>{forkName.toUpperCase()} IS LOCKED IN FOR DEPLOYMENT!</>}

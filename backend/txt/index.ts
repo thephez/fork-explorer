@@ -36,7 +36,7 @@ export function homeTXT() {
   const totalSignalling = miners
     .filter(([_, m]) => m.signals)
     .reduce((sum, [_, m]) => sum + m.numBlocks / currentNumberOfBlocks, 0);
-  const threshold = Number.parseFloat((config.fork.threshold / 2016).toFixed(2));
+  const threshold = Number.parseFloat((config.fork.threshold / 4032).toFixed(2));
   const thresholdPercentage = Math.floor(threshold * 100);
 
   let blocksTable = "";
@@ -97,7 +97,7 @@ ${wrap80(config.fork.info.join("\n\n"))}
 
 ---
 
-Current signalling period of 2016 blocks
+Current signalling period of 4032 blocks
 
 ${labelPct}
 ${progressBarWithPct}

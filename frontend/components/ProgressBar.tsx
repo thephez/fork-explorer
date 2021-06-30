@@ -120,10 +120,10 @@ function ProgressBar() {
     currentNumberOfNonSignallingBlocks,
   } = computeStats(blocks);
 
-  const nonSignallingRatio = currentNumberOfNonSignallingBlocks / 2016;
+  const nonSignallingRatio = currentNumberOfNonSignallingBlocks / 4032;
   const nonSignallingPercentage = (nonSignallingRatio * 100).toFixed(currentNumberOfNonSignallingBlocks < 20 ? 2 : 0);
 
-  const blocksLeftRatio = blocksLeftInThisPeriod / 2016;
+  const blocksLeftRatio = blocksLeftInThisPeriod / 4032;
   let blocksLeftPercentage = (blocksLeftRatio * 100).toFixed(blocksLeftInThisPeriod < 20 ? 2 : 0);
 
   // Add rounding error leftovers to blocks left percentage
@@ -142,14 +142,14 @@ function ProgressBar() {
     }
   }
 
-  const thresholdPercentage = Math.floor((config.fork.threshold / 2016) * 100);
+  const thresholdPercentage = Math.floor((config.fork.threshold / 4032) * 100);
 
   return (
     <Container>
       <ProgressBarContainer>
         {currentSignallingRatioToAll > 0 && (
           <Green
-            roundedRightBorder={currentNumberOfSignallingBlocks === 2016}
+            roundedRightBorder={currentNumberOfSignallingBlocks === 4032}
             style={{ flex: currentSignallingRatioToAll }}
           >
             {currentSignallingRatioToAll > 0.035 && `${currentSignallingPercentageToAll}%`}
@@ -165,7 +165,7 @@ function ProgressBar() {
           </White>
         )}
         {nonSignallingRatio > 0 && (
-          <Red roundedLeftBorder={currentNumberOfNonSignallingBlocks === 2016} style={{ flex: nonSignallingRatio }}>
+          <Red roundedLeftBorder={currentNumberOfNonSignallingBlocks === 4032} style={{ flex: nonSignallingRatio }}>
             {nonSignallingRatio > 0.035 && `${nonSignallingPercentage}%`}
           </Red>
         )}
