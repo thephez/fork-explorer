@@ -100,16 +100,16 @@ const config: Config = {
   },
 
   bitcoinRpc: {
-    server: "http://127.0.0.1:8332",
-    user: "",
-    password: "",
+    server: "http://127.0.0.1:9998",
+    user: "user",
+    password: "pass",
   },
 
   fork: {
-    name: "Taproot",
+    name: "dip0020",
     info: [],
-    versionBit: 2,
-    threshold: 1815,
+    versionBit: 6,
+    threshold: 3226,
     status: "started",
   },
 
@@ -123,15 +123,15 @@ const config: Config = {
     about: {
       softfork: {
         info: [
-          React.createElement(React.Fragment, null, "Info about the Taproot softfork goes here"),
-          React.createElement(React.Fragment, null, "Info about the Taproot softfork goes here"),
+          React.createElement(React.Fragment, null, "This fork enable a new LLMQ for Dash Platform use(size 100). It also adds/re-enables opcodes defined in DIP-20 (https://github.com/dashpay/dips/dip-0020.md)."),
+          // React.createElement(React.Fragment, null, "Info about the Taproot softfork goes here"),
         ],
       },
       method: {
-        title: "Title of the softfork deployment method used (BIP9, Speedy Trial etc)",
+        title: "Modified BIP-9 deployment method",
         info: [
-          React.createElement(React.Fragment, null, "Info about the deployment method goes here"),
-          React.createElement(React.Fragment, null, "Info about the deployment method goes here"),
+          React.createElement(React.Fragment, null, "Activation threshold is gradually reduced from 80% to 60% over a period of 10 windows."),
+          // React.createElement(React.Fragment, null, "Info about the deployment method goes here"),
         ],
       },
     },
