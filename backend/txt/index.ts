@@ -60,8 +60,8 @@ export function homeTXT() {
       notes.push(`${forkName} cannot be locked in within this period (90% of the blocks have to signal).`);
     else {
       if (willProbablyActivate)
-        notes.push(`Taproot will lock in with the current signalling ratio (${currentSignallingPercentage}%)!`);
-      else notes.push(`Taproot will not lock in with the current signalling ratio (${currentSignallingPercentage}%)`);
+        notes.push(`DIP-20 will lock in with the current signalling ratio (${currentSignallingPercentage}%)!`);
+      else notes.push(`DIP-20 will not lock in with the current signalling ratio (${currentSignallingPercentage}%)`);
     }
   }
 
