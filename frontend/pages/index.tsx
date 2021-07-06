@@ -117,12 +117,12 @@ export default function Blocks() {
                           <br />
                           {willProbablyActivate && (
                             <>
-                              Taproot will lock in with the current signalling ratio ({currentSignallingPercentage}%)!
+                              DIP-20 will lock in with the current signalling ratio ({currentSignallingPercentage}%)!
                             </>
                           )}
                           {!willProbablyActivate && (
                             <>
-                              Taproot will not lock in with the current signalling ratio ({currentSignallingPercentage}
+                              DIP-20 will not lock in with the current signalling ratio ({currentSignallingPercentage}
                               %)
                             </>
                           )}
