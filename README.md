@@ -1,6 +1,6 @@
 # Fork Explorer
 
-Fork Explorer let's you see the status of a BIP9-style softfork. It relies on bitcoind and its JSON-RPC server.
+Fork Explorer let's you see the status of a BIP9-style softfork. It relies on dashd and its JSON-RPC server.
 
 <img width="1000" src="fork-explorer-screenshot.png" />
 
@@ -9,11 +9,18 @@ Fork Explorer let's you see the status of a BIP9-style softfork. It relies on bi
 You need [Deno](https://deno.land) version <= v1.9.2 to build and run this project. Deno is a new
 Javascript environment, similar to Node.
 
+Download Deno v1.9.2
+[here](https://github.com/denoland/deno/releases/tag/v1.9.2) and extract binary
+to `/home/<user>/.deno/bin`.
+
 0. Fix config file by duplicating `config/config.ts_TEMPLATE` to `config/config.ts` and setting
-   bitcoind's JSON-RPC credentials up.
+   dashd's JSON-RPC credentials up.
 1. `./build-frontend.sh`.
 2. `./run-server.sh`.
 3. Done.
+
+NOTE: I had stability issues and added a [script called via cron](deno-check.sh) as a quick hack
+to restart if deno isn't running.
 
 ### Running without bitcoind installed (faked data mode):
 
