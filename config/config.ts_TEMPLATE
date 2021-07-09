@@ -95,6 +95,7 @@ const config: Config = {
   mode: "real",
 
   server: {
+    // Set to your public IP to access from other machines
     host: "127.0.0.1",
     port: 8080,
   },
