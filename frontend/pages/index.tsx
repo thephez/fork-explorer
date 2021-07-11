@@ -92,7 +92,7 @@ export default function Blocks() {
               The current period cannot lock in {forkName}.
               <br />
               The next period starts in
-              {" " + formatDistanceToNow(addMinutes(new Date(), blocksLeftInThisPeriod * 10), {}) + " "}(
+              {" " + formatDistanceToNow(addMinutes(new Date(), blocksLeftInThisPeriod * 2.625), {}) + " "}(
               {blocksLeftInThisPeriod} block{blocksLeftInThisPeriod > 1 && "s"})
             </CannotLockInInfo>
           )}
