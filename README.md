@@ -22,6 +22,32 @@ to `/home/<user>/.deno/bin`.
 NOTE: I had stability issues and added a [script called via cron](deno-check.sh) as a quick hack
 to restart if deno isn't running.
 
+### Nginx
+
+`sudo apt install nginx`
+
+* Create new file in `/etc/nginx/sites-enabled` (e.g. `fork-explorer`)
+* Delete `default` file from `/etc/nginx/sites-enabled`
+* Copy the following into your new file
+
+```text
+server {
+  listen 80;
+
+  location / {
+    proxy_pass http://<IP from config.ts>:8080;
+    # Example: proxy_pass http://127.0.0.1:8080;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection 'upgrade';
+    proxy_set_header Host $host;
+    proxy_cache_bypass $http_upgrade;
+  }
+}
+```
+
+`sudo systemctl start nginx`
+
 ### Running without bitcoind installed (faked data mode):
 
 If you want to build and run fork-explorer without bitcoind, you can start one of the two
