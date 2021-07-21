@@ -110,7 +110,7 @@ const config: Config = {
     name: "dip0020",
     info: [],
     versionBit: 6,
-    threshold: 3218,
+    threshold: 3194,
     status: "started",
   },
 
