@@ -68,7 +68,7 @@ export default function Blocks() {
         <Body>
           <InfoContainer>
             <InfoSection>
-              <Header>Information about the softfork Taproot</Header>
+              <Header>Information about the softfork</Header>
               {config.frontend.about?.softfork?.info?.map((section, i) => (
                 <Text key={i}>{section}</Text>
               ))}

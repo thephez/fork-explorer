@@ -74,7 +74,7 @@ export default function Miners() {
                 <MinerBlock key={block.height}>
                   <Text>
                     {block.signals ? "✅ " : "🚫"} Block #
-                    <Anchor href={`https://mempool.space/block/${block.height}?showDetails=true`} target="_blank">
+                    <Anchor href={`https://blockchair.com/dash/block/${block.height}?showDetails=true`} target="_blank">
                       {block.height}
                     </Anchor>
                     <Locate href={`/?block=${block.height}`}>🔍</Locate>

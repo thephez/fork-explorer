@@ -46,7 +46,7 @@ export default function Miners() {
   const data: IMovingAverageData[] = blocks
     .filter((block) => block.signals !== undefined)
     .map((block, i) => {
-      const last144Blocks = blocks.slice(Math.max(i - 143, 0), i + 1);
+      const last144Blocks = blocks.slice(Math.max(i - 575, 0), i + 1);
       const numSignallingBlocks = last144Blocks.reduce((prev, curr) => {
         return prev + (curr.signals ? 1 : 0);
       }, 0);
@@ -54,12 +54,12 @@ export default function Miners() {
       return {
         periodHeight: i,
         height: block.height,
-        ratio: numSignallingBlocks / 144,
+        ratio: numSignallingBlocks / 576,
       };
     });
 
-  const xAxisTickValues = new Array(2016 / 144 + 1).fill(0).map((day, i) => {
-    return blocks[0].height + i * 144;
+  const xAxisTickValues = new Array(4032 / 576 + 1).fill(0).map((day, i) => {
+    return blocks[0].height + i * 576;
   });
 
   const lineStyle = {
@@ -74,7 +74,7 @@ export default function Miners() {
     tickLabels: { fill: theme.stats.labelColor },
   };
 
-  const thresholdPercentage = Math.floor((config.fork.threshold / 2016) * 100);
+  const thresholdPercentage = Math.floor((config.fork.threshold / 4032) * 100);
 
   return (
     <Container>
@@ -85,8 +85,8 @@ export default function Miners() {
         <SiteTitle />
         <SiteMenu />
         <Body>
-          <ChartTitle>144 Block Moving Average</ChartTitle>
-          <Text>Signalling percentage over the last 144 blocks (Moving Average) in the current period.</Text>
+          <ChartTitle>576 Block Moving Average</ChartTitle>
+          <Text>Signalling percentage over the last 576 blocks (Moving Average) in the current period.</Text>
           <Text>
             Reaching {thresholdPercentage}% is not indicative of a softfork lock-in. {config.fork.threshold} blocks
             within a period have to signal for the {config.fork.name} softfork to lock in.
@@ -140,7 +140,7 @@ export default function Miners() {
                 labels={() => null}
                 style={{ data: { stroke: "#999" } }}
                 domain={{ x: [data[0].height, data[data.length - 1].height] }}
-                y={() => config.fork.threshold / 2016}
+                y={() => config.fork.threshold / 4032}
               />
               <VictoryLine data={data} x="height" y="ratio" style={lineStyle} />
             </VictoryChart>
